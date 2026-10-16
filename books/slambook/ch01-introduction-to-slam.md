@@ -21,3 +21,8 @@ problem with the noisy input **u**
 
 It is related to the specific forms of the two equations from above(motion and observation), whethere they are linear or non-linear and the distribution of the noise, whether it is Gaussian or non-Gaussian
 
+The Linear Gaussian system is the simplest. and its unbiased optimal estimation can be  given by the Kalman Filter(KF). The more complex system is the nonlinear non-Gaussian system, which relies on two methods:
+-Extended Kalman FIlter (EKF)
+-nonlinear optimization 
+
+We linearize the system then we solve it in 2 steps: predict-update
