@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="270" viewBox="0 0 680 270" role="img" aria-labelledby="t d">
+  <title id="t">Cross product is perpendicular to both vectors</title>
+  <desc id="d">Vector a points right and vector b points back, both lying flat on a shaded parallelogram. The cross product a times b stands straight up from the parallelogram, at a right angle to both a and b.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#378ADD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#BA7517" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="340" y="40" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#848d97">a × b stands straight up from the plane of a and b</text>
+
+  <polygon points="260,230 380,230 450,181 330,181" fill="#378ADD" fill-opacity="0.14" stroke="#848d97" stroke-width="0.5" stroke-dasharray="4 3"/>
+  <text x="350" y="209" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#848d97">area = |a × b|</text>
+
+  <line x1="260" y1="230" x2="380" y2="230" stroke="#378ADD" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="260" y1="230" x2="330" y2="181" stroke="#1D9E75" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="260" y1="230" x2="260" y2="110" stroke="#BA7517" stroke-width="2" marker-end="url(#arrow-amber)"/>
+
+  <path d="M276 230 L276 214 L260 214" fill="none" stroke="#848d97" stroke-width="1.5"/>
+  <path d="M271.5 222 L271.5 208 L260 216" fill="none" stroke="#848d97" stroke-width="1.5"/>
+
+  <text x="394" y="235" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#848d97">a</text>
+  <text x="342" y="174" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#848d97">b</text>
+  <text x="260" y="98" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#848d97">a × b</text>
+</svg>
