@@ -18,15 +18,31 @@ $$
 A base is a set of linearly independent vectos in the space
 We have a base of 3 axes, here, the 3 e's can be seen as x,y,z and a's coordinates are how much each a moves each axis in a direction
 
-### The inner product of $ \mathbf {a}, \mathbf {b} \in  \mathbb {R}^ 3 $ can be written as:
+### The inner product
+
+For $\mathbf{a}, \mathbf{b} \in \mathbb{R}^3$, the inner product can be written as:
 
 $$
 \mathbf{a} \cdot \mathbf{b} = \mathbf{a}^T \mathbf{b}
 = \sum_{i=1}^{3} a_i b_i
-= |\mathbf{a}| \, |\mathbf{b}| \cos\langle \mathbf{a}, \mathbf{b} \rangle
+= |\mathbf{a}|\ |\mathbf{b}| \cos\langle \mathbf{a}, \mathbf{b} \rangle
 $$
 
-### The outer 
+#### The result of the outer product can be seen as another vector who is perpendicular to the two vectors
 
-![The result of the outer product can be seen as another vector who is perpendicular to the two vectors](images/cross-product.svg)
+!(images/cross-product.svg)
+
+We then write a, as a skew-symmetrix matrix, ^ will be considered a skew-symmetric symbol, a^ is skew-symmetric, its transpose equals its negative
+It turns the cross product into a matrix times a vector, which is a linear operation 
+
+$$
+\mathbf{a}^{\wedge} =
+\begin{bmatrix}
+0 & -a_3 & a_2 \\
+a_3 & 0 & -a_1 \\
+-a_2 & a_1 & 0
+\end{bmatrix},
+\qquad
+\mathbf{a} \times \mathbf{b} = \mathbf{a}^{\wedge} \mathbf{b}
+$$
 
