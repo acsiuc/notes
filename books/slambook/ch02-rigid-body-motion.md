@@ -30,7 +30,7 @@ $$
 
 #### The result of the outer product can be seen as another vector who is perpendicular to the two vectors
 
-!(images/cross-product.svg)
+![Cross product is perpendicular to a and b](images/cross-product.svg)
 
 We then write a, as a skew-symmetrix matrix, ^ will be considered a skew-symmetric symbol, a^ is skew-symmetric, its transpose equals its negative
 It turns the cross product into a matrix times a vector, which is a linear operation 
@@ -46,3 +46,10 @@ a_3 & 0 & -a_1 \\
 \mathbf{a} \times \mathbf{b} = \mathbf{a}^{\wedge} \mathbf{b}
 $$
 
+## Euclidian Transforms Betweeb Coordinate Systems
+Let's suppose we have a world coordinate system, and a robot, which also has its own coordinate system. We might say that that a vector in the camera system may have coordinates related to that system, same for the robot. 
+The conversion between these two coordinates is done using the transform rule
+
+Below we can see the coordinate transform. For the same vector p, its coordinates in the world and the coordinates in the camera system are different. This transformation relationship is described by the transform matrix T
+
+![World frame, camera frame, and a point p](images/world-camera-frames.svg)
