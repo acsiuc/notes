@@ -59,8 +59,7 @@ The motion between two coordinate systems is also called rigid body motion, cons
 ### The Rotation Matrix
 
 $$
-\begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}
-=
+\begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}=
 \begin{bmatrix}
 \mathbf{e}_1^T \mathbf{e}_1' & \mathbf{e}_1^T \mathbf{e}_2' & \mathbf{e}_1^T \mathbf{e}_3' \\
 \mathbf{e}_2^T \mathbf{e}_1' & \mathbf{e}_2^T \mathbf{e}_2' & \mathbf{e}_2^T \mathbf{e}_3' \\
@@ -72,6 +71,7 @@ $$
 
 It is also called direction cosine matrix, it is an orthogonal matrix with a determinant of 1 .
 Since the rotation matrix is orthogonal, its transpose describes an opposite rotation
+
 $$
 \mathbf{a}' = \mathbf{R}^{-1}\mathbf{a} = \mathbf{R}^T \mathbf{a}.
 $$
@@ -98,3 +98,38 @@ $$
 $$
 
 ### Homogenous coordinates are normal coordinates of a point, with an extra 1 added at the end
+
+## Euler Angles 
+
+The Euler angle provides a very intuitive way to describe the rotation since it is hard to imagine a rotation looks like only with the numbers of a rotation vector or rotation matrix
+
+![Euler angles and gimbal lock](images/Euler_angle_rotation.png)
+
+The ZYX angle is equivalent to decompose any rotation into the following three axes:
+- Rotate around the Z axis of the object to get the yaw angle
+- Rotate around the Y axis of after rotation to get the pitch angle
+- Rotate around the X axis of after rotation to get the roll angle
+
+In this way, we can use a three-dimensional vector to describe any rotation. Most areas have their own coordinate directions and habits when using Euler angles, not necessarily as we said here.
+
+A major drawback of Euler Angle is that it encounters the famous Gimbal lock, when the pitch angle is over 90 degrees, it will cause the system to lose one degree of freedom. Due to this fact, Euler angles are not suitable for our task. 
+
+## Quaternions
+
+A quaternion has a real part and three imaginary parts, we write the real part in the front, like this:
+$$
+\mathbf{q} = q_0 + q_1 i + q_2 j + q_3 k
+$$
+
+where i, j, k are the three imaginary parts of the quaternion. These three imaginary parts satisfy the following relationships:
+
+$$
+\begin{cases}
+i^2 = j^2 = k^2 = -1 \\
+ij = k, \; ji = -k \\
+jk = i, \; kj = -i \\
+ki = j, \; ik = -j
+\end{cases}
+$$
+
+If the real part of a quaternion is 0, then it is called an imaginary quaternion. Conversely, if the imaginary part is 0, then it is called a real quaternion. A unit quaternion is used to represent any rotation in 3D space
