@@ -83,3 +83,18 @@ $$
 \mathbf{a}' = \mathbf{R}\mathbf{a} + \mathbf{t},
 $$
 R turns the vector, t moves it, length and angles stay the same
+
+## Transform Matrix and Homogenous Coordinates
+The transformation relationship here is not a linear relationship, because if we make more transformations, they "compound", so to speak. For example, let's say we made two transformations $\mathbf{R}_1, \mathbf{t}_1$ and $\mathbf{R}_2, \mathbf{t}_2$:
+
+$$
+\mathbf{b} = \mathbf{R}_1 \mathbf{a} + \mathbf{t}_1, \qquad
+\mathbf{c} = \mathbf{R}_2 \mathbf{b} + \mathbf{t}_2.
+$$
+
+The transformation from a to c looks like this:
+$$
+\mathbf{c} = \mathbf{R}_2 \left( \mathbf{R}_1 \mathbf{a} + \mathbf{t}_1 \right) + \mathbf{t}_2.
+$$
+
+### Homogenous coordinates are normal coordinates of a point, with an extra 1 added at the end
