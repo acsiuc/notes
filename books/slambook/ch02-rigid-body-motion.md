@@ -46,10 +46,40 @@ a_3 & 0 & -a_1 \\
 \mathbf{a} \times \mathbf{b} = \mathbf{a}^{\wedge} \mathbf{b}
 $$
 
-## Euclidian Transforms Betweeb Coordinate Systems
+## Euclidian Transforms Between Coordinate Systems
 Let's suppose we have a world coordinate system, and a robot, which also has its own coordinate system. We might say that that a vector in the camera system may have coordinates related to that system, same for the robot. 
 The conversion between these two coordinates is done using the transform rule
 
 Below we can see the coordinate transform. For the same vector p, its coordinates in the world and the coordinates in the camera system are different. This transformation relationship is described by the transform matrix T
 
 ![World frame, camera frame, and a point p](images/world-camera-frames.svg)
+
+The motion between two coordinate systems is also called rigid body motion, consisting of a rotation and a translation. Imagine throwing your phone in the air, its length and angle of each face will stay the same, but its initial position and rotation will change.
+
+### The Rotation Matrix
+
+$$
+\begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}
+=
+\begin{bmatrix}
+\mathbf{e}_1^T \mathbf{e}_1' & \mathbf{e}_1^T \mathbf{e}_2' & \mathbf{e}_1^T \mathbf{e}_3' \\
+\mathbf{e}_2^T \mathbf{e}_1' & \mathbf{e}_2^T \mathbf{e}_2' & \mathbf{e}_2^T \mathbf{e}_3' \\
+\mathbf{e}_3^T \mathbf{e}_1' & \mathbf{e}_3^T \mathbf{e}_2' & \mathbf{e}_3^T \mathbf{e}_3'
+\end{bmatrix}
+\begin{bmatrix} a_1' \\ a_2' \\ a_3' \end{bmatrix}
+\overset{\triangle}{=} \mathbf{R}\mathbf{a}'
+$$
+
+It is also called direction cosine matrix, it is an orthogonal matrix with a determinant of 1 .
+Since the rotation matrix is orthogonal, its transpose describes an opposite rotation
+$$
+\mathbf{a}' = \mathbf{R}^{-1}\mathbf{a} = \mathbf{R}^T \mathbf{a}.
+$$
+
+The coordinate transformation relationship can be simply described by using a rotation matrix R and a translation vector t.
+Compared to the rotation, the translation part simply adds the translation vector to the coordinates after the rotation:
+
+$$
+\mathbf{a}' = \mathbf{R}\mathbf{a} + \mathbf{t},
+$$
+R turns the vector, t moves it, length and angles stay the same
