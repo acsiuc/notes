@@ -133,3 +133,42 @@ ki = j, \; ik = -j
 $$
 
 If the real part of a quaternion is 0, then it is called an imaginary quaternion. Conversely, if the imaginary part is 0, then it is called a real quaternion. A unit quaternion is used to represent any rotation in 3D space
+
+## Quaternion Operations
+Quaternions are very similar to complex numbers, we can easily do addition, subtraction, multiplication between two quaternions, just as we would do with two complex numbers. 
+
+## Using a Quaternion to Represent a Rotation
+
+We can use a quaternion to express the rotation of a point. The 3D point p is rotated to become p'. If we use a matrix then there is p'=Rp. And if we use quaternion to describe rotation, how do we operate a 3D vector with a quaternion?
+
+The first step would be to extend the 3D point to an imaginary quaternion, we can see the real part is 0:
+$$
+\mathbf{p} = [0, x, y, z]^T = [0, \mathbf{v}]^T
+$$
+
+We just put the three coordinates into the imaginary part and keep the real part as 0. Then, the rotated point p' can be expressed as such a product:
+
+## Affine and Projective Transformation
+
+In addition to the Euclidian transformation, there exist other types of transformation, from which the Euclidian transformation is the simplest. The Euclidian transformation keeps the vector's length and angle. It's like you would pick up a book, turn it, look around, and putting it some other place.The book's length and angle stay the same
+
+### Similarity Transformation
+
+It is similar to the Euclidian Transformation, but here we take into account a uniform scaling factor. A cube with side length 1 to be changed to side length 10, it would still be a cube.
+
+### Affine Transformation
+
+Any move that keeps straight lines straight and parallel lines paralel. 
+Mixing any of these would result in an affine transformation:
+
+**Rotate**
+
+**Shift**
+
+**Scale**
+
+**Shear**
+
+**Flip**
+
+
