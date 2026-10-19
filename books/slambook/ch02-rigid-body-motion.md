@@ -185,3 +185,11 @@ It is the most general transformation. The transformation from the real world to
 | Similarity | $\begin{bmatrix} s\mathbf{R} & \mathbf{t} \\ \mathbf{0}^T & 1 \end{bmatrix}$ | 7  | Volume ratio |
 | Affine     | $\begin{bmatrix} \mathbf{A} & \mathbf{t} \\ \mathbf{0}^T & 1 \end{bmatrix}$  | 12 | Parallelism, volume ratio |
 | Perspective | $\begin{bmatrix} \mathbf{A} & \mathbf{t} \\ \mathbf{a}^T & v \end{bmatrix}$ | 15 | Plane intersection and tangency |
+
+## Visualizing Trajectory
+
+
+![Trajectory of triples visualized](images/poses.png)
+
+Each triple is one capture. The robot (camera) moves and each triple is where it was and which way it was turned at that moment.
+The colored axes are the camera's own frame and the grey axes are the reference point.
