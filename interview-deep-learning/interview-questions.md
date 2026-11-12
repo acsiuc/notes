@@ -13,3 +13,11 @@ A batch is a grouping of multiple samples from the dataset, like 32 imags maybe,
 ## Your model trains well with batch size 32. You change it to 1024 and accuracy gets worse. Give one possible reason
 
 One possible reason would be that the dataset is too small for a batch size of 1024, which would mean less updates per epoch, resulting in a higher loss than expected
+
+## What is a CNN (Convolutional Neural Network)
+
+A convolutional network is a type of neural network that is used for data  with a grid structure, a normal network treats every pixel as a separate input, a CNN looks at small regions of images and slides small filters over the image
+
+## In a CNN, what does a convolutional layer do to an image?
+
+It slides small filters(kernels) over parts of that image and tries to find patterns like edges, multiplying each filter value by the pixel under it
