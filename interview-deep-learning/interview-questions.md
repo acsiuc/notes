@@ -9,3 +9,7 @@ Some fixex would be a learning rate scheduler, which would consist in lowering t
 ## What is the difference between a batch, an epoch, and an iteration in training?
 
 A batch is a grouping of multiple samples from the dataset, like 32 imags maybe, an epoch is one full pass over the whole dataset, and an iteration is a loss optimization over a batch, which updates the weights and the loss changes as a result (forward pass, loss, backward pass, update)
+
+## Your model trains well with batch size 32. You change it to 1024 and accuracy gets worse. Give one possible reason
+
+One possible reason would be that the dataset is too small for a batch size of 1024, which would mean less updates per epoch, resulting in a higher loss than expected
