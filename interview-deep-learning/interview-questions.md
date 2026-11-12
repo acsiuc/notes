@@ -20,4 +20,12 @@ A convolutional network is a type of neural network that is used for data  with 
 
 ## In a CNN, what does a convolutional layer do to an image?
 
-It slides small filters(kernels) over parts of that image and tries to find patterns like edges, multiplying each filter value by the pixel under it
+It slides small filters(kernels) over parts of that image and tries to find patterns like edges, multiplying each filter value by the pixel under 
+
+## What is a pooling layer, and what is max pooling?
+
+A pooling layer makes the feature map smaller. It slides a small window over the map and replaces each window with one number. Max pooling: the one number is the largest value in the window, pooling reduces computation and keeps the strongest response, so the model still knows a pattern is present
+
+## Max pooling throws away 3 out of every 4 values. Why is this usually acceptable for image recognition?
+
+The high value already tells us the pattern is present, for recognition we need to know that the pattern exists in the region, not its exact pixel, the 3 discarded values are weaker responses and add little information
