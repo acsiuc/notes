@@ -41,3 +41,11 @@ Advanced Driver Assistance Systems
 ## In ADAS, a far pedestrian is only a few pixels wide. Why is this hard for a network with many pooling layers?
 
 Because since there are many pooling layers and the pedestrian is small, the map size becomes smaller, and one cell can be bigger than a pedestrian, and this would lead to even the pedestrian being mislocated since its object could also get mixed in with the background of that cell
+
+## Why do we put an activation function (for example ReLU) after a layer? What happens if we remove it?
+
+We put an activation function adds non-linearity after a layer because we want the network to learn complex patterns rather than multiple layers to become stacked linear layer one on top of each other and like this the network would only be able to learn straight-line relationships, no matter how deep the network is
+
+## ReLU sets all negative values to 0. Why is this simple function enough to make the network non-linear
+
+Because ReLU adds a bend at 0, and it does this for every layer, for a network without ReLU, every layer would be just a straight line, and adding different straight lines on top of each other would still result in a straight line, but ReLU adds a bend at 0, for every layer and adding lines with different bends would give an non-linear line
