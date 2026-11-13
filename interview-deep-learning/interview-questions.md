@@ -33,3 +33,11 @@ The high value already tells us the pattern is present, for recognition we need 
 ## Object detection must say where an object is. Why can too much pooling hurt this task?
 
 Too much pooling can hurt the task because pooling usually halves the map size, and with too much pooling, our cell size would have a too bigger portion of the original image, it would know there is a car, but not exactly where that car is
+
+## What is ADAS?
+
+Advanced Driver Assistance Systems
+
+## In ADAS, a far pedestrian is only a few pixels wide. Why is this hard for a network with many pooling layers?
+
+Because since there are many pooling layers and the pedestrian is small, the map size becomes smaller, and one cell can be bigger than a pedestrian, and this would lead to even the pedestrian being mislocated since its object could also get mixed in with the background of that cell
